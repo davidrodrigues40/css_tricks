@@ -1,0 +1,46 @@
+.toolbar {
+    display: grid;
+    grid-template-columns: [left] 30% [center] 1fr [right] 30%;
+    background-color: var(--primary-color);
+    padding: calc(var(--gap) / 2);
+}
+
+.toolbar-left {
+    display: grid;
+    grid-template-columns: [left] 40px [right] 1fr;
+    align-items: center;
+}
+
+.toolbar-center {
+    display: grid;
+    grid-template-columns: [col]1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.toolbar-right {
+    display: grid;
+    grid-template-columns: [left] 24px [right] 24px;
+    align-items: center;
+    justify-content: right;
+    gap: var(--gap);
+}
+
+.toolbar-right>a {
+    width: 24px;
+    white-space: nowrap;
+}
+
+.title {
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: calc(var(--gap) * 1.5);
+    align-items: center;
+}
+
+a,
+a:visited {
+    color: white;
+    text-decoration: none;
+}

@@ -1,0 +1,16 @@
+.main-layout {
+    display: grid;
+    min-height: 100vh;
+    min-height: 100dvh;
+    grid-template-rows: 64px [content]1fr 40px;
+}
+
+footer {
+    display: grid;
+    background-color: var(--primary-color);
+    color: white;
+    grid-template-columns: [left]100px [context] 1fr [right]100px;
+    justify-items: center;
+    align-items: center;
+    padding: var(--gap)
+}

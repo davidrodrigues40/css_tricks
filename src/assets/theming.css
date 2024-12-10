@@ -1,0 +1,15 @@
+.bg-light {
+    background-color: var(--secondary-color);
+}
+
+.bg-dark {
+    background-color: var(--primary-color--dark);
+}
+
+.align-center {
+    text-align: center;
+}
+
+.bolder {
+    font-weight: 600;
+}

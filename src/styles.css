@@ -1,0 +1,21 @@
+:root {
+    --gap: 16px;
+    --icon-size: 24px;
+    --primary-color: rgb(118, 163, 248);
+    --secondary-color: #637799;
+    --dotted-line-border-width: 4px;
+    --primary-color--dark: rgb(15, 46, 102);
+    --layout-grid-small: 50px;
+}
+
+body {
+    margin: 0;
+    background-color: #363636;
+    color: white;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
