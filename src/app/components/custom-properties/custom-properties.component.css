@@ -1,0 +1,75 @@
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.plans {
+    display: grid;
+    grid-template-columns: [pram] 33% [bike] 33% [rocket] 33%
+}
+
+.plan {
+    --_shadow: var(--shadow, pink);
+    --_icon: var(--icon, red);
+    --_button-hover: var(--button-hover, red);
+
+    position: relative;
+    display: grid;
+    justify-content: start;
+    gap: var(--gap);
+    background: var(--bg-color-light);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 1rem rgb(0 0 0 /0.25),
+        -1rem -1rem 0 0 var(--_shadow);
+    color: black;
+    width: 160px;
+}
+
+.plan .button:hover,
+.plan .button:focus {
+    background-color: var(--_button-hover);
+}
+
+.plan__icon {
+    color: var(--_icon);
+    width: 2.5rem;
+}
+
+.plan__price {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.plan__title {
+    color: var(--_icon);
+}
+
+.plan__subprice {
+    font-weight: normal;
+    font-size: small;
+}
+
+.plan>.button:last-child {
+    justify-content: center;
+    width: 100%;
+}
+
+.plan__pram {
+    --icon: var(--clr-yellow-500);
+    --shadow: var(--clr-yellow-300);
+    --button-hover: var(--clr-yellow-300);
+}
+
+.plan__bike {
+    --icon: var(--clr-cornflowerblue-500);
+    --shadow: var(--clr-cornflowerblue-300);
+    --button-hover: var(--clr-cornflowerblue-300);
+}
+
+.plan__rocket {
+    --icon: var(--clr-green-500);
+    --shadow: var(--clr-green-300);
+    --button-hover: var(--clr-green-300);
+}

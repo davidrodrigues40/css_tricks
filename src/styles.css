@@ -6,6 +6,18 @@
     --dotted-line-border-width: 4px;
     --primary-color--dark: rgb(15, 46, 102);
     --layout-grid-small: 50px;
+    --bg-color-dark: #000;
+    --bg-color-light: white;
+    --primary-color-shadow: rgb(174, 201, 250);
+    --secondary-color-shadow: #a3a5a8;
+    --primary-color--dark-shadow: rgb(84, 122, 192);
+
+    --clr-green-500: rgba(2, 143, 2, 1);
+    --clr-green-300: rgb(131, 236, 131);
+    --clr-cornflowerblue-500: rgb(54, 111, 216);
+    --clr-cornflowerblue-300: rgb(100, 149, 237);
+    --clr-yellow-500: rgb(146, 146, 23);
+    --clr-yellow-300: rgb(192, 192, 120);
 }
 
 body {
@@ -13,6 +25,7 @@ body {
     background-color: #363636;
     color: white;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 16px !important;
 }
 
 html,

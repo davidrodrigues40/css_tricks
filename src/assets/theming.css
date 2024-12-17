@@ -1,3 +1,11 @@
+h2 {
+    margin: 0;
+}
+
+section {
+    margin-bottom: var(--gap);
+}
+
 .bg-light {
     background-color: var(--secondary-color);
 }
@@ -6,10 +14,42 @@
     background-color: var(--primary-color--dark);
 }
 
+.bg-darker {
+    background-color: var(--bg-color-dark);
+}
+
 .align-center {
     text-align: center;
 }
 
 .bolder {
-    font-weight: 600;
+    font-weight: 700;
+}
+
+.font-size-larger {
+    font-size: larger;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-items-center {
+    justify-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.col-gap-base {
+    column-gap: var(--gap);
+}
+
+.col-gap-sm {
+    column-gap: calc(var(--gap)/2);
+}
+
+.padding-base {
+    padding: var(--gap);
 }

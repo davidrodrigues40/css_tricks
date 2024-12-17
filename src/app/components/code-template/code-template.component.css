@@ -1,0 +1,41 @@
+.code-heading {
+    background-color: var(--secondary-color);
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: calc(var(--gap)/2);
+}
+
+.code {
+    background-color: var(--bg-darker);
+    padding: var(--gap);
+}
+
+.keyword {
+    color: rgb(168, 170, 146);
+}
+
+.property {
+    color: cornflowerblue;
+}
+
+.property-indent {
+    color: white;
+}
+
+.value-text {
+    color: rgb(160, 145, 127);
+}
+
+.value-number {
+    color: rgb(204, 204, 164)
+}
+
+.indent {
+    margin-left: 10px;
+}
+
+.line::after {
+    content: "<br>";
+}

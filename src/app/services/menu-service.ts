@@ -1,14 +1,19 @@
+import { Observable, of } from "rxjs";
 import { MenuItem } from "../models/menu-item";
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class MenuService {
     private readonly _menuItems: MenuItem[] = [
         { label: 'Home', route: 'home', icon: 'home' },
-        { label: 'DottedLine', route: 'dotted-line', icon: 'more_vert' },
-        { label: 'CSS Grid', route: 'grid', icon: 'grid_view' }
+        { label: 'Dotted line', route: 'dotted-line', icon: 'more_vert' },
+        { label: 'CSS grid', route: 'grid', icon: 'grid_view' },
+        { label: 'Custom properties', route: 'custom-properties', icon: 'tune' }
     ];
 
-    getMenuItems(): MenuItem[] {
-        return this.sort();
+    initialize$(): Observable<MenuItem[]> {
+        const items: MenuItem[] = this.sort();
+        return of(items);
     }
 
     private sort(): MenuItem[] {

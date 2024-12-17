@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DottedLineComponent } from './components/dotted-line/dotted-line.component';
 import { HomeComponent } from './components/home/home.component';
 import { GridDemoComponent } from './components/grid-demo/grid-demo.component';
+import { CustomPropertiesComponent } from './components/custom-properties/custom-properties.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,9 @@ const routes: Routes = [
   },
   {
     path: 'grid', component: GridDemoComponent
+  },
+  {
+    path: 'custom-properties', component: CustomPropertiesComponent
   },
   {
     path: '**', component: HomeComponent

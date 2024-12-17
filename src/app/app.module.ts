@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DottedLineComponent } from './components/dotted-line/dotted-line.component';
 import { StoreModule } from '@ngrx/store';
-import { navigationReducer } from "src/app/state/navigation/navigation-reducers";
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
@@ -14,6 +13,16 @@ import { MatMenuModule } from '@angular/material/menu';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { GridDemoComponent } from './components/grid-demo/grid-demo.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { EffectsModule } from '@ngrx/effects';
+import { NavigationService } from './services/navigation-service';
+import { MenuService } from './services/menu-service';
+import { reducers } from './state/reducers';
+import { MenuEffects } from './state/menu/menu-effects';
+import { NavigationEffects } from './state/navigation/navigation-effects';
+import { ClipboardModule } from '@angular/cdk/clipboard';
+import { CodeTemplateComponent } from './components/code-template/code-template.component';
+import { CustomPropertiesComponent } from './components/custom-properties/custom-properties.component';
 
 @NgModule({
   declarations: [
@@ -22,19 +31,24 @@ import { GridDemoComponent } from './components/grid-demo/grid-demo.component';
     HomeComponent,
     HeaderComponent,
     MenuComponent,
-    GridDemoComponent
+    GridDemoComponent,
+    FooterComponent,
+    CodeTemplateComponent,
+    CustomPropertiesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
     MatIconModule,
+    ClipboardModule,
     MatButtonModule,
     MatMenuModule,
-    StoreModule.forRoot({ navigationState: navigationReducer }),
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot(MenuEffects, NavigationEffects),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [NavigationService, MenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

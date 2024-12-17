@@ -1,0 +1,34 @@
+<div>
+      <div class="code-heading">
+            <div>{{codeType}}</div>
+            <div>
+                  <button mat-icon-button
+                          [cdkCopyToClipboard]="getValue()">
+                        <mat-icon>content_copy</mat-icon>
+                  </button>
+            </div>
+      </div>
+      <div id="code-div"
+           class="code bg-darker">
+            <div *ngFor="let line of lines">
+                  <span [innerHTML]="getIndent(line)"></span>
+                  <span class="keyword"
+                        *ngIf="line.keyword"
+                        [innerHtml]="line.keyword"></span>
+                  <span *ngIf="line.additionalKeywordText"
+                        [innerHtml]="line.additionalKeywordText"></span>
+                  <span [class]="getPropertyClass(line.indentLevel)"
+                        *ngIf="line.property"
+                        [innerHtml]="line.property"></span>
+                  <span *ngIf="line.propertySeparator"
+                        [innerHtml]="line.propertySeparator"></span>
+                  <span [class]="getValueClass(line.value)"
+                        *ngIf="line.value"
+                        [innerHtml]="' ' + line.value"></span>
+                  <span *ngIf="line.additionalValueText"
+                        [innerHtml]="line.additionalValueText"></span>
+                  <span *ngIf="line.additionalPropertyText"
+                        [innerHtml]="'&nbsp;' + line.additionalPropertyText"></span>
+            </div>
+      </div>
+</div>

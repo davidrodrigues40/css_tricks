@@ -1,7 +1,7 @@
-.content-grid,
-.full-width {
+.content-grid {
     display: grid;
     margin-top: var(--gap);
+    row-gap: var(--gap);
     grid-template-columns:
         [full-width-start] var(--layout-grid-small) [breakout-start] var(--layout-grid-small) [content-start] 1fr [content-end] var(--layout-grid-small) [breakout-end] var(--layout-grid-small) [full-width-end];
 }
