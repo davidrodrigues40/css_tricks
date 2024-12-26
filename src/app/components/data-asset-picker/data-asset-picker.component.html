@@ -1,0 +1,25 @@
+<section class="checklist">
+    <mat-accordion multi>
+        <mat-expansion-panel collapsedHeight="48px"
+                             expandedHeight="48px"
+                             *ngFor="let menuGroup of menu;">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <mat-checkbox class="example-margin"
+                                  [checked]="allChecked(menuGroup)"
+                                  [indeterminate]="partiallyComplete(menuGroup)"
+                                  (change)="updateMenu(menuGroup, $event.checked)">
+                        {{menuGroup.title}}
+                    </mat-checkbox></mat-panel-title>
+            </mat-expansion-panel-header>
+            <ul>
+                <li *ngFor="let item of menuGroup.items; let i = index">
+                    <mat-checkbox [checked]="item.visible"
+                                  (change)="updateMenu(menuGroup, $event.checked, i)">
+                        {{item.value}}
+                    </mat-checkbox>
+                </li>
+            </ul>
+        </mat-expansion-panel>
+    </mat-accordion>
+</section>

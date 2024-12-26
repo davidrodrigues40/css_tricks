@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { MenuItem } from 'src/app/models/menu-item';
 import { MenuService } from 'src/app/services/menu-service';
 import { getTitle } from 'src/app/state/navigation/navigation-selectors';
 

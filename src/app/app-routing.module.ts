@@ -4,6 +4,7 @@ import { DottedLineComponent } from './components/dotted-line/dotted-line.compon
 import { HomeComponent } from './components/home/home.component';
 import { GridDemoComponent } from './components/grid-demo/grid-demo.component';
 import { CustomPropertiesComponent } from './components/custom-properties/custom-properties.component';
+import { HtmlPdfComponent } from './components/html-pdf/html-pdf.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,9 @@ const routes: Routes = [
   },
   {
     path: 'custom-properties', component: CustomPropertiesComponent
+  },
+  {
+    path: 'html-pdf', component: HtmlPdfComponent
   },
   {
     path: '**', component: HomeComponent

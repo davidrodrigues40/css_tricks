@@ -8,7 +8,8 @@ export class MenuService {
         { label: 'Home', route: 'home', icon: 'home' },
         { label: 'Dotted line', route: 'dotted-line', icon: 'more_vert' },
         { label: 'CSS grid', route: 'grid', icon: 'grid_view' },
-        { label: 'Custom properties', route: 'custom-properties', icon: 'tune' }
+        { label: 'Custom properties', route: 'custom-properties', icon: 'tune' },
+        { label: 'Html to Pdf', route: 'html-pdf', icon: 'folder_code' }
     ];
 
     initialize$(): Observable<MenuItem[]> {

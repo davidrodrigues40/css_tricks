@@ -5,5 +5,5 @@ footer {
     grid-template-columns: [left]100px [context] 1fr [right]100px;
     justify-items: center;
     align-items: center;
-    padding: var(--gap)
+    padding: var(--gap);
 }

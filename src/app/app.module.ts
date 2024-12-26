@@ -23,6 +23,12 @@ import { NavigationEffects } from './state/navigation/navigation-effects';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { CodeTemplateComponent } from './components/code-template/code-template.component';
 import { CustomPropertiesComponent } from './components/custom-properties/custom-properties.component';
+import { HtmlPdfComponent } from './components/html-pdf/html-pdf.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { DataAssetPickerComponent } from './components/data-asset-picker/data-asset-picker.component';
+import { DataAssetEffects } from './state/data-asset/data-asset.effects';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +40,9 @@ import { CustomPropertiesComponent } from './components/custom-properties/custom
     GridDemoComponent,
     FooterComponent,
     CodeTemplateComponent,
-    CustomPropertiesComponent
+    CustomPropertiesComponent,
+    HtmlPdfComponent,
+    DataAssetPickerComponent
   ],
   imports: [
     BrowserModule,
@@ -44,8 +52,11 @@ import { CustomPropertiesComponent } from './components/custom-properties/custom
     ClipboardModule,
     MatButtonModule,
     MatMenuModule,
+    MatCheckboxModule,
+    MatExpansionModule,
+    FormsModule,
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot(MenuEffects, NavigationEffects),
+    EffectsModule.forRoot(MenuEffects, NavigationEffects, DataAssetEffects),
     BrowserAnimationsModule
   ],
   providers: [NavigationService, MenuService],

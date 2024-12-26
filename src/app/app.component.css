@@ -2,5 +2,5 @@
     display: grid;
     min-height: 100vh;
     min-height: 100dvh;
-    grid-template-rows: [header] 64px [content]1fr [footer]40px;
+    grid-template-rows: [header] 64px [content]1fr [footer] 24px;
 }
