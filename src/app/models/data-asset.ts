@@ -11,6 +11,7 @@ export interface DataAsset {
 }
 
 export enum DataAssetType {
-    Single = 'Single',
-    List = 'List'
+    NotSet = 0,
+    Single = 1,
+    List = 2
 }
