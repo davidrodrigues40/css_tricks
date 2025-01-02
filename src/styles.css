@@ -103,3 +103,11 @@ body {
 .column-50 {
     flex-basis: 49.5%;
 }
+
+.column-33 {
+    flex-basis: 32.3%;
+}
+
+.column-66 {
+    flex-basis: 66%;
+}
